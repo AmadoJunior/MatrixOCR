@@ -23,7 +23,6 @@ public class UploadController{
     public String decodeImage(File file){
         try{
             String curDir = System.getProperty("user.dir");
-            this.OCR.setDatapath(curDir + "/tessdata");
             return this.OCR.doOCR(file);
         } catch(TesseractException e){
             e.printStackTrace();
