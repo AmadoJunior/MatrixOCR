@@ -15,9 +15,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compile group: 'net.java.dev.jai-imageio', name: 'jai-imageio-core-standalone', version: '1.2-pre-dr-b04-2011-07-04'
-	compile group: 'org.ghost4j', name: 'ghost4j', version: '0.5.1'
-	implementation 'net.sourceforge.tess4j:tess4j:2.0.0'
+	implementation 'net.sourceforge.tess4j:tess4j:3.4.8'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
