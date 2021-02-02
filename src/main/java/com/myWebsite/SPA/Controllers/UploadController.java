@@ -33,10 +33,10 @@ public class UploadController{
 
     @PostMapping("/upload")
     public UserFile HandleImageUpload(@RequestBody String base64Image){
-        byte[] data = Base64.decodeBase64(base64Image.split(",")[1]);
+        byte[] byteData = Base64.decodeBase64(base64Image.split(",")[1]);
         File file = new File("img.png");
         try (OutputStream os = new FileOutputStream(file)) {
-            os.write(data);
+            os.write(byteData);
         } catch(IOException e){
             e.printStackTrace();
         }
