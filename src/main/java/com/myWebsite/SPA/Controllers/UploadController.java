@@ -23,6 +23,7 @@ public class UploadController{
     public String decodeImage(File file){
         try{
             String curDir = System.getProperty("user.dir");
+            System.out.println(curDir);
             return this.OCR.doOCR(file);
         } catch(TesseractException e){
             e.printStackTrace();
@@ -34,13 +35,14 @@ public class UploadController{
     public UserFile HandleImageUpload(@RequestBody String base64Image){
         byte[] data = Base64.decodeBase64(base64Image.split(",")[1]);
         File file = new File("img.png");
+        System.out.println(file);
         try (OutputStream os = new FileOutputStream(file)) {
             os.write(data);
         } catch(IOException e){
             e.printStackTrace();
         }
         String imageText = decodeImage(file);
-        file.delete();
+        System.out.println(file.delete());
         return new UserFile(counter.incrementAndGet(), file , imageText);
     }
 }
