@@ -15,7 +15,7 @@ import net.sourceforge.tess4j.Tesseract;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("${api.base.path}")
+@RequestMapping("/api/v1")
 public class UploadController{
     private final AtomicLong counter = new AtomicLong();
     private final Tesseract OCR = new Tesseract();
