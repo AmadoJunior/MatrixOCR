@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.myWebsite'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '8'
+sourceCompatibility = '1.8'
 
 repositories {
 	// Use mavenCentral for resolving dependencies
@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'net.sourceforge.tess4j:tess4j:4.0.0'
+	implementation 'net.sourceforge.tess4j:tess4j:4.3.1'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
