@@ -38,17 +38,17 @@ this.addEventListener("install", (event) => {
 })
 
 //Listen for Requests
-this.addEventListener("fetch", (event) => {
-    event.respondWith(
-        caches.match(event.request)
-            .then(() => {
-                return fetch(event.request)
-                    .catch(() => {
-                        return caches.match("offline.html")
-                    })
-            })
-    )
-})
+// this.addEventListener("fetch", (event) => {
+//     event.respondWith(
+//         caches.match(event.request)
+//             .then(() => {
+//                 return fetch(event.request)
+//                     .catch(() => {
+//                         return caches.match("offline.html")
+//                     })
+//             })
+//     )
+// })
 
 //Activate SW
 this.addEventListener("activate", (event) => {
